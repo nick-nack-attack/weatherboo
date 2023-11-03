@@ -19,7 +19,7 @@ const HumidityChart: React.FC<Props> = ({results}: Props) => {
         "Humidity (%)": results.hourly.relativehumidity_2m[i],
     }))
 
-    const dataFormatter = (n: number) => n;
+    const dataFormatter = (n: number) => String(n);
 
     return (
         <Card>

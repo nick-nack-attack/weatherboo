@@ -2,20 +2,14 @@
 import React, {useState} from 'react';
 import {City, Country, ICity, IState, State} from "country-state-city";
 import {useRouter} from "next/navigation";
-import {CityOption, CountryOption} from "@/typings";
+import {CityOption, CountryOption, StateOption} from "@/typings";
 import {defaultCountry} from "@/lib/constants";
 import Selector from "@components/Selector";
 
 const CityPicker: React.FC = () => {
     const [selectedCountry, setSelectedCountry] = useState<CountryOption>(defaultCountry);
-    const [selectedState, setSelectedState] = useState<{
-        value: {
-            countryCode: string;
-            stateCode: string;
-        },
-        label: string;
-    }[]>(null);
-    const [selectedCity, setSelectedCity] = useState<CityOption>(null);
+    const [selectedState, setSelectedState] = useState<StateOption | null>(null);
+    const [selectedCity, setSelectedCity] = useState<CityOption | null>(null);
 
     const router = useRouter();
 
@@ -24,7 +18,7 @@ const CityPicker: React.FC = () => {
         setSelectedState(null);
     }
 
-    const handleSelectedState = (s: IState) => setSelectedState(s)
+    const handleSelectedState = (s: StateOption) => setSelectedState(s);
 
     const handleSelectedCity = (c: CityOption) => {
         setSelectedCity(c);
@@ -48,16 +42,22 @@ const CityPicker: React.FC = () => {
         label: s.name
     }));
 
-    const getCities = () => City.getCitiesOfState(selectedState?.value?.countryCode, selectedState?.value?.stateCode)?.map((c: ICity) => ({
-        value: {
-            latitude: c.latitude,
-            longitude: c.longitude,
-            countryCode: c.countryCode,
-            name: c.name,
-            stateCode: c.stateCode,
-        },
-        label: c.name
-    }));
+    const getCities = () => {
+        if (selectedState?.value?.countryCode && selectedState?.value?.stateCode) {
+            return City.getCitiesOfState(selectedState.value.countryCode, selectedState.value.stateCode).map((c: ICity) => ({
+                value: {
+                    latitude: c.latitude,
+                    longitude: c.longitude,
+                    countryCode: c.countryCode,
+                    name: c.name,
+                    stateCode: c.stateCode,
+                },
+                label: c.name
+            }))
+        } else {
+            return [];
+        }
+    };
 
     return (
             <div className="space-y-4">

@@ -1,5 +1,3 @@
-import {Country} from "country-state-city";
-
 type CountryOption = {
     value: {
         latitude: string,
@@ -18,6 +16,14 @@ type CityOption = {
         stateCode: string;
     },
     label: string
+} | null;
+
+type StateOption = {
+    value: {
+        countryCode: string;
+        stateCode: string;
+    },
+    label: string;
 } | null;
 
 interface CurrentWeather {

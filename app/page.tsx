@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex min-h-screen flex-col justify-center bg-gradient-to-r from-cyan-500 to-blue-500 p-10">
             <div className={"flex flex-col max-w-xl self-center gap-5"}>
                 <div>
-                    <WeatherBooLogo textColor={"white"}/>
+                    <WeatherBooLogo/>
                     <Subtitle className={"text-white/50"}>Powered by OpenAI</Subtitle>
                 </div>
                 <div>

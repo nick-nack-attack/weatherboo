@@ -1,8 +1,5 @@
 import React from 'react';
 import {SunIcon} from "@heroicons/react/24/solid";
-import WeatherBooLogo from "@components/WeatherBooLogo";
-import {Subtitle} from "@tremor/react";
-import CityPicker from "@components/CityPicker";
 
 const loading: React.FC = () => {
     return (
