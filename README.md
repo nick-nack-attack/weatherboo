@@ -41,30 +41,30 @@ yarn dev
 pnpm dev
 ```
 
-5. Open your web browser and visit [http://localhost:3000](https://nextjs.org/](http://localhost:3000) to see WeatherBoo in action.
+5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to see WeatherBoo in action.
 
 ## Usage
-- Access the root of the application by visiting http://localhost:3000.
+- Access the root of the application by visiting [http://localhost:3000](http://localhost:3000/).
 - You can also access specific locations using the following URL format: `/location/{city_name}/{lat}/{long}`.
 
 ## Customization
 You can customize WeatherBoo to your heart's content by modifying the code in the `app/page.tsx` file. The app automatically updates as you edit this file, making it easy to tailor the user experience to your liking.
 
 ## Font Optimization
-WeatherBoo uses `next/font` to automatically optimize and load the Inter font, a custom Google Font, ensuring a visually appealing and consistent experience.
+WeatherBoo uses [next/font](https://nextjs.org/docs/deployment) to automatically optimize and load the Inter font, a custom Google Font, ensuring a visually appealing and consistent experience.
 
 ## Learn More
 To learn more about Next.js, GraphQL, and other technologies used in WeatherBoo, check out these resources:
 
-- Next.js Documentation - Learn about Next.js features and API.
-- Learn Next.js - An interactive Next.js tutorial.
-- Apollo GraphQL - Explore Apollo Client for React.
-- Stepzen Documentation - Dive into Stepzen's GraphQL APIs.
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive Next.js tutorial.
+- [Apollo GraphQL](https://www.apollographql.com/docs/react/) - Explore Apollo Client for React.
+- [Stepzen Documentation](https://stepzen.com/docs) - Dive into Stepzen's GraphQL APIs.
 
 ## Contribute
-Feel free to contribute to the development of WeatherBoo by providing feedback or submitting pull requests. You can check out the WeatherBoo GitHub repository for more information on how to get involved.
+Feel free to contribute to the development of WeatherBoo by providing feedback or submitting pull requests. You can check out the [WeatherBoo GitHub repository](https://github.com/yourusername/weatherboo) for more information on how to get involved.
 
 ## Deploy on Vercel
-The easiest way to deploy your WeatherBoo app is to use the Vercel Platform from the creators of Next.js. For detailed deployment instructions, consult the Next.js deployment documentation.
+The easiest way to deploy your WeatherBoo app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js. For detailed deployment instructions, consult the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
 
 We hope you enjoy using WeatherBoo to add a touch of humor to your daily weather checks! Stay tuned for updates and new features.
